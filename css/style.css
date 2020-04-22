@@ -1,0 +1,115 @@
+body {
+    font-family: Fira Mono, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+    line-height: 13px;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    padding: 1vh;
+}
+
+
+span {
+    color: #6897BB;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .left, .content .right {
+    flex: 1;
+    min-height: 240px;
+}
+
+.content .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .left img {
+    width: 350px;
+    height: auto;
+}
+
+pre {
+    background: #161C2D;
+    border-radius: 2px;
+    border: 10px solid #1D263B;
+    counter-reset: line;
+    height: 95vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+pre > span {
+    display: block;
+    height: 0px;
+}
+
+pre > span:before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    padding: 0 1.3em;
+    color: #325180;
+    width: 2px;
+}
+
+pre > span:after {
+    opacity: .25;
+    content: "¬";
+}
+
+pre > span .key {
+    color: #f13e54;
+}
+
+pre > span .key-orange {
+    color: #fa9765;
+}
+
+pre > span .value {
+    color: #40dd5a;
+}
+
+pre > span .value a {
+    color: #2cdceb;
+    text-decoration: none;
+}
+
+pre > span .value a:hover {
+   border-bottom: 1.5px solid #2cdceb;
+}
+
+pre > span .dot-space {
+    position: relative;
+    top: -3px;
+    letter-spacing: 2px;
+    opacity: 0.25;
+}
+
+pre::-webkit-scrollbar {
+    width: 0.5em;
+    background: #36286c;
+}
+
+pre::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: #202940;
+    outline: 1px solid slategrey;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 527px) {
+    body {
+        font-size: 6px;
+    }
+}
